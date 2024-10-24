@@ -9,32 +9,5 @@
     <h1>adivina el numero</h1>
     <input type="text">
     <button>calcular</button>
-    <p id="result"></p>
-    <script>
-        const randomNumber = Math.floor(Math.random() * 100) + 1;
-        console.log(randomNumber);
-        
-        const btn = document.querySelector('button');
-        const input = document.querySelector('input');
-        const result = document.getElementById('result');
-        
-        btn.addEventListener('click', () => {
-            const userNumber = parseInt(input.value);
-            
-            if (isNaN(userNumber) || userNumber < 1 || userNumber > 100) {
-                result.textContent = 'ingrese un numero entre 1 y 100';
-                return;
-            }
-            
-            if (userNumber === randomNumber) {
-                result.textContent = 'felicidades, adivinaste el numero!';
-            } else if (userNumber < randomNumber) {
-                result.textContent = 'el numero es mayor';
-            } else {
-                result.textContent = 'el numero es menor';
-            }
-        });
-        
-    </script>
 </body>
 </html>
